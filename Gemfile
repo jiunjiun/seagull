@@ -86,6 +86,9 @@ gem 'google-analytics-rails'
 # worker
 gem 'sidekiq'
 
+# http client
+gem 'rest-client'
+
 # Settings
 gem 'settingslogic'
 
