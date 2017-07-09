@@ -1,0 +1,13 @@
+doctype html
+html
+  head
+    title Seagull
+
+    = stylesheet_link_tag 'application', media: 'all'
+
+    = csrf_meta_tags
+  body
+    == render partial: 'common/nav'
+    == yield
+    == render partial: 'common/footer'
+    = javascript_include_tag 'application'
