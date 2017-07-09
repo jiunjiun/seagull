@@ -1,0 +1,2 @@
+class Maicoin < ApplicationRecord
+end

@@ -1,0 +1,2 @@
+class Bitoex < ApplicationRecord
+end
