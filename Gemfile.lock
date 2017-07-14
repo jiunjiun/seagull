@@ -70,6 +70,9 @@ GEM
     capistrano-rvm (0.1.2)
       capistrano (~> 3.0)
       sshkit (~> 1.2)
+    capistrano-sidekiq (0.10.0)
+      capistrano
+      sidekiq (>= 3.4)
     capybara (2.14.4)
       addressable
       mime-types (>= 1.16)
@@ -295,6 +298,7 @@ DEPENDENCIES
   capistrano-passenger
   capistrano-rails (~> 1.2)
   capistrano-rvm
+  capistrano-sidekiq
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
   decent_exposure (= 3.0.2)
@@ -328,4 +332,4 @@ DEPENDENCIES
   whenever
 
 BUNDLED WITH
-   1.14.6
+   1.15.1

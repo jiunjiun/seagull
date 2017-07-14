@@ -73,6 +73,7 @@ group :development, :test do # 也包含 test 是為了讓寫 test case 時也�
   gem 'capistrano-bundler'
   gem 'capistrano-rvm'
   gem 'capistrano-passenger'
+  gem 'capistrano-sidekiq'
 
   gem 'rails-erd'
 end
