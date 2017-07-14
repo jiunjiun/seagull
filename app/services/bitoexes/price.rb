@@ -7,7 +7,8 @@ module Bitoexes
     end
 
     def call kind, url
-      response = JSON.parse RestClient.get url
+      currnt_path = Rails.root.join('app', 'services', 'bitoexes')
+      response = JSON.parse `python #{currnt_path}/parse.py #{url}`
       assign kind, response
     rescue => e
       {}
