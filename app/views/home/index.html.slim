@@ -8,6 +8,7 @@
       span.label.label-primary BTC
     .col-md-6.text-right
       = bitoxe.created_at.strftime('%F %H:%M')
+  .row.price
     .col-md-4
       h1
         = number_to_currency bitoxe.buy, precision: 0, unit: ''
@@ -31,6 +32,7 @@
       span.label.label-primary BTC
     .col-md-6.text-right
       = maicoin.first.created_at.strftime('%F %H:%M')
+  .row.price
     .col-md-4
       h1
         = number_to_currency maicoin.first.buy, precision: 0, unit: ''
@@ -49,6 +51,7 @@
       span.label.label-danger ETH
     .col-md-6.text-right
       = maicoin.last.created_at.strftime('%F %H:%M')
+  .row.price
     .col-md-4
       h1
         = number_to_currency maicoin.last.buy, precision: 0, unit: ''

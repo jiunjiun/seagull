@@ -16,3 +16,26 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.price {
+  /* Portrait tablets and small desktops */
+  @media (min-width: 768px) and (max-width: 991px) {
+    .col-md-4:first-child, .col-md-4:last-child {
+      text-align: center;
+    }
+  }
+
+  /* Landscape phones and portrait tablets */
+  @media (max-width: 767px) {
+    .col-md-4:first-child, .col-md-4:last-child {
+      text-align: center;
+    }
+  }
+
+  /* Portrait phones and smaller */
+  @media (max-width: 480px) {
+    .col-md-4:first-child, .col-md-4:last-child {
+      text-align: center;
+    }
+  }
+}
