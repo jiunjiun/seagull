@@ -6,21 +6,21 @@
   .row
     .col-md-6.col-sm-3.col-xs-3
       span.label.label-primary BTC
-    .col-md-6.col-sm-9.col-xs-9.text-right
-      = bitoxe.created_at.strftime('%F %H:%M')
-  .row.price
-    .col-md-4
+    .col-md-6.col-sm-9.col-xs-9.text-right.bitoex_btc_created_at
+      = bitoex.created_at.strftime('%F %H:%M')
+  .row.bitoex_btc.price
+    .col-md-4.text-left
       h1
-        = number_to_currency bitoxe.buy, precision: 0, unit: ''
+        spanspan= number_to_currency bitoex.buy, precision: 0, unit: ''
         small &nbsp; buy
     .col-md-4.text-center
       h1
-        = number_to_currency bitoxe.sell, precision: 0, unit: ''
+        span= number_to_currency bitoex.sell, precision: 0, unit: ''
         small &nbsp; sell
     .col-md-4.text-right
       h1
-        = number_to_currency bitoxe.avg, precision: 0, unit: ''
-        small &nbsp; avg.
+        span= number_to_currency bitoex.avg, precision: 0, unit: ''
+        small &nbsp; avg
   br/
   br/
   .row
@@ -30,37 +30,38 @@
   .row
     .col-md-6.col-sm-3.col-xs-3
       span.label.label-primary BTC
-    .col-md-6.col-sm-9.col-xs-9.text-right
+    .col-md-6.col-sm-9.col-xs-9.text-right.maicoin_btc_created_at
       = maicoin.first.created_at.strftime('%F %H:%M')
-  .row.price
-    .col-md-4
+  .row.maicoin_btc.price
+    .col-md-4.text-left
       h1
-        = number_to_currency maicoin.first.buy, precision: 0, unit: ''
+        span= number_to_currency maicoin.first.buy, precision: 0, unit: ''
         small &nbsp; buy
     .col-md-4.text-center
       h1
-        = number_to_currency maicoin.first.sell, precision: 0, unit: ''
+        span= number_to_currency maicoin.first.sell, precision: 0, unit: ''
         small &nbsp; sell
     .col-md-4.text-right
       h1
-        = number_to_currency maicoin.first.avg, precision: 0, unit: ''
-        small &nbsp; avg.
+        span= number_to_currency maicoin.first.avg, precision: 0, unit: ''
+        small &nbsp; avg
   br/
   .row
     .col-md-6.col-sm-3.col-xs-3
       span.label.label-danger ETH
-    .col-md-6.col-sm-9.col-xs-9.text-right
+    .col-md-6.col-sm-9.col-xs-9.text-right.maicoin_eth_created_at
       = maicoin.last.created_at.strftime('%F %H:%M')
-  .row.price
-    .col-md-4
+  .row.maicoin_eth.price
+    .col-md-4.text-left
       h1
-        = number_to_currency maicoin.last.buy, precision: 0, unit: ''
+        span= number_to_currency maicoin.last.buy, precision: 0, unit: ''
         small &nbsp; buy
     .col-md-4.text-center
       h1
-        = number_to_currency maicoin.last.sell, precision: 0, unit: ''
+        span= number_to_currency maicoin.last.sell, precision: 0, unit: ''
         small &nbsp; sell
     .col-md-4.text-right
       h1
-        = number_to_currency maicoin.last.avg, precision: 0, unit: ''
-        small &nbsp; avg.
+        span= number_to_currency maicoin.last.avg, precision: 0, unit: ''
+        small &nbsp; avg
+  br/
