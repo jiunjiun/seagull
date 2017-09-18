@@ -18,6 +18,33 @@
 @import "bootstrap";
 @import "sticky-footer";
 
+.rise {
+  font-size: 55%;
+  color: #4CAF50;
+  &::before {
+    content: '▲';
+  }
+}
+.fall {
+  font-size: 55%;
+  color: #FF5722;
+  &::before {
+    content: '▼';
+  }
+}
+
+.btn-detail {
+  margin-top: 30px;
+  padding-right: 20px;
+  cursor: pointer;
+}
+
+.detail {
+  .status {
+    font-size: 28px;
+  }
+}
+
 .price {
   /* Portrait tablets and small desktops */
   @media (min-width: 768px) and (max-width: 991px) {

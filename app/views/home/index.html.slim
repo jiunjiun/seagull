@@ -7,16 +7,31 @@
     .col-md-6.col-sm-3.col-xs-3
       span.label.label-primary Bitoex
     .col-md-6.col-sm-9.col-xs-9.text-right.bitoex_btc_created_at
-      = maicoin.first.created_at.strftime('%F %H:%M')
+      = bitoex.created_at.strftime('%F %H:%M')
   .row.bitoex_btc.price
-    .col-md-4.col-xs-6.col-md-offset-2.text-left
+    .col-md-6.col-xs-6.text-center.buy
       h1
         span= number_to_currency bitoex.buy, precision: 0, unit: ''
-        small &nbsp; buy
-    .col-md-4.col-xs-6.text-right
+        | &nbsp;
+        br.visible-xs
+        small.day class="#{bitoex_btc_change[:day][:buy][:status]}"
+          = number_to_currency bitoex_btc_change[:day][:buy][:change], precision: 2, unit: ''
+          | %
+        small.minute_30 class="#{bitoex_btc_change[:minute_30][:buy][:status]}"
+          = number_to_currency bitoex_btc_change[:minute_30][:buy][:change], precision: 2, unit: ''
+          | %
+    .col-md-6.col-xs-6.text-center.sell
       h1
         span= number_to_currency bitoex.sell, precision: 0, unit: ''
-        small &nbsp; sell
+        | &nbsp;
+        br.visible-xs
+        small.day class="#{bitoex_btc_change[:day][:sell][:status]}"
+          = number_to_currency bitoex_btc_change[:day][:sell][:change], precision: 2, unit: ''
+          | %
+        small.minute_30 class="#{bitoex_btc_change[:minute_30][:sell][:status]}"
+          = number_to_currency bitoex_btc_change[:minute_30][:sell][:change], precision: 2, unit: ''
+          | %
+
   br/
   .row
     .col-md-6.col-sm-3.col-xs-3
@@ -24,14 +39,28 @@
     .col-md-6.col-sm-9.col-xs-9.text-right.maicoin_btc_created_at
       = maicoin.first.created_at.strftime('%F %H:%M')
   .row.maicoin_btc.price
-    .col-md-4.col-xs-6.col-md-offset-2.text-left
+    .col-md-6.col-xs-6.text-center.buy
       h1
         span= number_to_currency maicoin.first.buy, precision: 0, unit: ''
-        small &nbsp; buy
-    .col-md-4.col-xs-6.text-right
+        | &nbsp;
+        br.visible-xs
+        small.day class="#{maicoin_btc_change[:day][:buy][:status]}"
+          = number_to_currency maicoin_btc_change[:day][:buy][:change], precision: 2, unit: ''
+          | %
+        small.minute_30 class="#{maicoin_btc_change[:minute_30][:buy][:status]}"
+          = number_to_currency maicoin_btc_change[:minute_30][:buy][:change], precision: 2, unit: ''
+          | %
+    .col-md-6.col-xs-6.text-center.sell
       h1
         span= number_to_currency maicoin.first.sell, precision: 0, unit: ''
-        small &nbsp; sell
+        | &nbsp;
+        br.visible-xs
+        small.day class="#{maicoin_btc_change[:day][:sell][:status]}"
+          = number_to_currency maicoin_btc_change[:day][:sell][:change], precision: 2, unit: ''
+          | %
+        small.minute_30 class="#{maicoin_btc_change[:minute_30][:sell][:status]}"
+          = number_to_currency maicoin_btc_change[:minute_30][:sell][:change], precision: 2, unit: ''
+          | %
 
   br/
   br/
@@ -45,13 +74,27 @@
     .col-md-6.col-sm-9.col-xs-9.text-right.maicoin_eth_created_at
       = maicoin.last.created_at.strftime('%F %H:%M')
   .row.maicoin_eth.price
-    .col-md-4.col-xs-6.col-md-offset-2.text-left
+    .col-md-6.col-xs-6.text-center.buy
       h1
         span= number_to_currency maicoin.last.buy, precision: 0, unit: ''
-        small &nbsp; buy
-    .col-md-4.col-xs-6.text-right
+        | &nbsp;
+        br.visible-xs
+        small.day class="#{maicoin_eth_change[:day][:buy][:status]}"
+          = number_to_currency maicoin_eth_change[:day][:buy][:change], precision: 2, unit: ''
+          | %
+        small.minute_30 class="#{maicoin_eth_change[:minute_30][:buy][:status]}"
+          = number_to_currency maicoin_eth_change[:minute_30][:buy][:change], precision: 2, unit: ''
+          | %
+    .col-md-6.col-xs-6.text-center.sell
       h1
         span= number_to_currency maicoin.last.sell, precision: 0, unit: ''
-        small &nbsp; sell
+        | &nbsp;
+        br.visible-xs
+        small.day class="#{maicoin_eth_change[:day][:sell][:status]}"
+          = number_to_currency maicoin_eth_change[:day][:sell][:change], precision: 2, unit: ''
+          | %
+        small.minute_30 class="#{maicoin_eth_change[:minute_30][:sell][:status]}"
+          = number_to_currency maicoin_eth_change[:minute_30][:sell][:change], precision: 2, unit: ''
+          | %
   br/
   br/
