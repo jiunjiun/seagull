@@ -14,23 +14,27 @@
         span= number_to_currency bitoex.buy, precision: 0, unit: ''
         | &nbsp;
         br.visible-xs
-        small.day class="#{bitoex_btc_change[:day][:buy][:status]}"
-          = number_to_currency bitoex_btc_change[:day][:buy][:change], precision: 2, unit: ''
-          | %
-        small.minute_30 class="#{bitoex_btc_change[:minute_30][:buy][:status]}"
-          = number_to_currency bitoex_btc_change[:minute_30][:buy][:change], precision: 2, unit: ''
-          | %
+        - if bitoex_btc_change.try(:[], :day).try(:[], :buy)
+          small.day class="#{bitoex_btc_change[:day][:buy][:status]}"
+            = number_to_currency bitoex_btc_change[:day][:buy][:change], precision: 2, unit: ''
+            | %
+        - if bitoex_btc_change.try(:[], :minute_30).try(:[], :buy)
+          small.minute_30 class="#{bitoex_btc_change[:minute_30][:buy][:status]}"
+            = number_to_currency bitoex_btc_change[:minute_30][:buy][:change], precision: 2, unit: ''
+            | %
     .col-md-6.col-xs-6.text-center.sell
       h1
         span= number_to_currency bitoex.sell, precision: 0, unit: ''
         | &nbsp;
         br.visible-xs
-        small.day class="#{bitoex_btc_change[:day][:sell][:status]}"
-          = number_to_currency bitoex_btc_change[:day][:sell][:change], precision: 2, unit: ''
-          | %
-        small.minute_30 class="#{bitoex_btc_change[:minute_30][:sell][:status]}"
-          = number_to_currency bitoex_btc_change[:minute_30][:sell][:change], precision: 2, unit: ''
-          | %
+        - if bitoex_btc_change.try(:[], :day).try(:[], :sell)
+          small.day class="#{bitoex_btc_change[:day][:sell][:status]}"
+            = number_to_currency bitoex_btc_change[:day][:sell][:change], precision: 2, unit: ''
+            | %
+        - if bitoex_btc_change.try(:[], :minute_30).try(:[], :sell)
+          small.minute_30 class="#{bitoex_btc_change[:minute_30][:sell][:status]}"
+            = number_to_currency bitoex_btc_change[:minute_30][:sell][:change], precision: 2, unit: ''
+            | %
 
   br/
   .row
@@ -44,23 +48,27 @@
         span= number_to_currency maicoin.first.buy, precision: 0, unit: ''
         | &nbsp;
         br.visible-xs
-        small.day class="#{maicoin_btc_change[:day][:buy][:status]}"
-          = number_to_currency maicoin_btc_change[:day][:buy][:change], precision: 2, unit: ''
-          | %
-        small.minute_30 class="#{maicoin_btc_change[:minute_30][:buy][:status]}"
-          = number_to_currency maicoin_btc_change[:minute_30][:buy][:change], precision: 2, unit: ''
-          | %
+        - if maicoin_btc_change.try(:[], :day).try(:[], :buy)
+          small.day class="#{maicoin_btc_change[:day][:buy][:status]}"
+            = number_to_currency maicoin_btc_change[:day][:buy][:change], precision: 2, unit: ''
+            | %
+        - if maicoin_btc_change.try(:[], :minute_30).try(:[], :buy)
+          small.minute_30 class="#{maicoin_btc_change[:minute_30][:buy][:status]}"
+            = number_to_currency maicoin_btc_change[:minute_30][:buy][:change], precision: 2, unit: ''
+            | %
     .col-md-6.col-xs-6.text-center.sell
       h1
         span= number_to_currency maicoin.first.sell, precision: 0, unit: ''
         | &nbsp;
         br.visible-xs
-        small.day class="#{maicoin_btc_change[:day][:sell][:status]}"
-          = number_to_currency maicoin_btc_change[:day][:sell][:change], precision: 2, unit: ''
-          | %
-        small.minute_30 class="#{maicoin_btc_change[:minute_30][:sell][:status]}"
-          = number_to_currency maicoin_btc_change[:minute_30][:sell][:change], precision: 2, unit: ''
-          | %
+        - if maicoin_btc_change.try(:[], :day).try(:[], :sell)
+          small.day class="#{maicoin_btc_change[:day][:sell][:status]}"
+            = number_to_currency maicoin_btc_change[:day][:sell][:change], precision: 2, unit: ''
+            | %
+        - if maicoin_btc_change.try(:[], :minute_30).try(:[], :sell)
+          small.minute_30 class="#{maicoin_btc_change[:minute_30][:sell][:status]}"
+            = number_to_currency maicoin_btc_change[:minute_30][:sell][:change], precision: 2, unit: ''
+            | %
 
   br/
   br/
@@ -79,22 +87,26 @@
         span= number_to_currency maicoin.last.buy, precision: 0, unit: ''
         | &nbsp;
         br.visible-xs
-        small.day class="#{maicoin_eth_change[:day][:buy][:status]}"
-          = number_to_currency maicoin_eth_change[:day][:buy][:change], precision: 2, unit: ''
-          | %
-        small.minute_30 class="#{maicoin_eth_change[:minute_30][:buy][:status]}"
-          = number_to_currency maicoin_eth_change[:minute_30][:buy][:change], precision: 2, unit: ''
-          | %
+        - if maicoin_eth_change.try(:[], :day).try(:[], :buy)
+          small.day class="#{maicoin_eth_change[:day][:buy][:status]}"
+            = number_to_currency maicoin_eth_change[:day][:buy][:change], precision: 2, unit: ''
+            | %
+        - if maicoin_eth_change.try(:[], :minute_30).try(:[], :buy)
+          small.minute_30 class="#{maicoin_eth_change[:minute_30][:buy][:status]}"
+            = number_to_currency maicoin_eth_change[:minute_30][:buy][:change], precision: 2, unit: ''
+            | %
     .col-md-6.col-xs-6.text-center.sell
       h1
         span= number_to_currency maicoin.last.sell, precision: 0, unit: ''
         | &nbsp;
         br.visible-xs
-        small.day class="#{maicoin_eth_change[:day][:sell][:status]}"
-          = number_to_currency maicoin_eth_change[:day][:sell][:change], precision: 2, unit: ''
-          | %
-        small.minute_30 class="#{maicoin_eth_change[:minute_30][:sell][:status]}"
-          = number_to_currency maicoin_eth_change[:minute_30][:sell][:change], precision: 2, unit: ''
-          | %
+        - if maicoin_eth_change.try(:[], :day).try(:[], :sell)
+          small.day class="#{maicoin_eth_change[:day][:sell][:status]}"
+            = number_to_currency maicoin_eth_change[:day][:sell][:change], precision: 2, unit: ''
+            | %
+        - if maicoin_eth_change.try(:[], :minute_30).try(:[], :sell)
+          small.minute_30 class="#{maicoin_eth_change[:minute_30][:sell][:status]}"
+            = number_to_currency maicoin_eth_change[:minute_30][:sell][:change], precision: 2, unit: ''
+            | %
   br/
   br/
